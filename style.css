@@ -252,7 +252,7 @@ section {
     background: var(--bg-card);
 }
 
-.box img {
+.menu .box img {
     height: 18rem;
     border-radius: 100%;
 }
@@ -269,16 +269,255 @@ section {
     padding: 0.5rem 0; /* Adiciona espaçamento vertical ao preço */
 }
 
-.box .price span {
+.menu .box .price span {
     font-size: 1.5rem;
     text-decoration: line-through; /* Aplica uma linha para indicar preço riscado */
     font-weight: lighter; /* Aplica um peso de fonte mais fino */
 }
 
-.box:hover {
+.menu .box:hover {
     background: #fff;
 }
 
-.box:hover > * { /* Altera a cor dos elementos filhos para preto ao passar o mouse */
+.menu .box:hover > * { /* Altera a cor dos elementos filhos para preto ao passar o mouse */
     color: black; 
+}
+
+
+
+
+/* SECTION PROMOÇÕES */
+
+
+
+.products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Cria colunas flexíveis com largura mínima de 30rem e máxima proporcional */
+    gap: 1.5rem;
+}
+
+.box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+}
+
+.box .icons a ion-icon {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    margin: 0.3rem;
+}
+
+.box .icons a ion-icon:hover {
+    background: var(--main-color);
+}
+
+.box .image { /* Habilitando um preenchimento ao elemento pai da imagem */
+    padding: 2.5rem 0;
+}
+
+.box .image img {
+    height: 25rem;
+}
+
+
+.products .box .content {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.products .box .content .stars ion-icon {
+    font-size: 1.9rem;
+    color: var(--main-color);
+}
+
+.box .content .price {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.box .content .price span {
+    font-weight: lighter;
+    font-size: 1.5rem;
+    text-transform: lowercase;
+}
+
+
+
+
+/* Section REVIEW*/ 
+
+.review .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Cria colunas flexíveis com largura mínima de 30rem e máxima proporcional */
+    gap: 1.5rem;
+}
+
+.review .box-container .box {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.review .box-container .box p {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.user {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover; /*Ajusta a imagem para preencher o container sem distorção*/
+}
+
+.review .box-container .box h3 {
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+
+.stars ion-icon {
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+/* FOOTER */
+
+.title-footer {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.title-footer span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.footer {
+    background: var(--bg);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7%;
+    flex-wrap: wrap;
+}
+
+.content-1 {
+    flex: 1 1 25rem; /* Define tamanho flexível com largura mínima de 25rem */
+    margin: 1rem; /* Adiciona espaçamento ao redor do conteúdo */
+}
+
+.content-1 ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o espaçamento interno padrão */
+}
+
+.content-1 ul li {
+    margin-bottom: 1rem; /* Adiciona espaçamento inferior entre os itens da lista */
+}
+
+.content-1 ul li a {
+    color: #ccc; /* Define a cor do texto como cinza claro */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 1.6rem; /* Define o tamanho da fonte */
+    transition: color 0.3s; /* Aplica uma transição suave na mudança de cor */
+}
+
+.content-1 ul li a:hover {
+    color: var(--main-color); /* Altera a cor para a cor principal ao passar o mouse */
+}
+
+.social-links {
+    display: flex;
+    /* Ativa o layout flexível */
+    gap: 1rem;
+    /* Define o espaçamento entre os itens */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
+    margin-top: 1.5rem;
+    /* Adiciona espaço acima das redes sociais */
+}
+
+.social-links a {
+    color: #fff; /* Define a cor inicial dos ícones */
+    font-size: 3rem; /* Define o tamanho dos ícones */
+    transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+.social-links a:hover {
+    color: var(--main-color); /* Altera a cor para a cor principal ao passar o mouse */
+}
+
+.footer-bottom {
+    text-align: center; /* Centraliza o texto */
+    padding: 1rem 0; /* Adiciona espaçamento interno vertical */
+    font-size: 1.6rem; /* Define o tamanho da fonte */
+    border-top: var(--border); /* Adiciona uma borda superior */
+    margin-top: 2rem; /* Adiciona espaço acima do rodapé inferior */
+    color: #fff; /* Define a cor do texto como cinza claro */
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header nav {
+        display: none;
+    }
+
+    .home {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    } 
+
+    .home .content h3 {
+        font-size: 4.5rem;
+    }
+
+    .home .content p {
+        font-size: 1.7rem;
+    }
+}
+
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
 }
